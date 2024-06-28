@@ -1,7 +1,6 @@
 package com.example.opencvforjava.Config;
 
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
@@ -16,12 +15,17 @@ import java.util.concurrent.ThreadPoolExecutor;
 @Slf4j
 public class PoolExecutor {
 
-    @Autowired
-    private ThreadPoolConfig threadPoolConfig;
+    private final ThreadPoolConfig threadPoolConfig;
+
+    public PoolExecutor(ThreadPoolConfig threadPoolConfig){
+        this.threadPoolConfig = threadPoolConfig;
+    }
 
     @Bean
     public Executor threadPoolTaskExecutor(){
         log.info("线程名称前缀：{}",threadPoolConfig.getThreadNamePrefix());
+        log.info("核心线程数：{}",threadPoolConfig.getCorePoolSize());
+        log.info("最大线程数：{}",threadPoolConfig.getMaxPoolSize());
         log.info("拒绝策略：{}",new ThreadPoolExecutor.AbortPolicy());
         log.info("非核心线程空闲时等待时长：{}",threadPoolConfig.getKeepAliveSeconds()+"");
         log.info("Runable线程队列长度：{}",threadPoolConfig.getQueueCapacity()+"");

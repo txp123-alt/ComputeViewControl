@@ -5,3 +5,16 @@ thread:
       queueCapacity: 100
       rejectedExecutionHandler: java.util.concurrent.ThreadPoolExecutor$AbortPolicy
       keepAliveSeconds: 60
+
+#spring:
+#  rabbitmq:
+#    # RabbitMQ服务器地址
+#    host: 39.107.255.39
+#    # RabbitMQ服务器端口
+#    port: 5672
+#    # RabbitMQ虚拟主机
+#    virtual-host: /
+#    # RabbitMQ用户名
+#    username: guest
+#    # RabbitMQ密码
+#    password: 123456
