@@ -24,8 +24,9 @@ public class OpencvForJavaApplication {
     private final static String imagePath2 = "D:/openCV/image_Test/targetImages/T.png";
 
     public static void main(String[] args) {
+        //加载opencv
         Loader.load(opencv_java.class);
-        test();
+        //test();
         SpringApplication.run(OpencvForJavaApplication.class, args);
     }
 

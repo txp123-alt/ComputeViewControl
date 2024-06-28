@@ -1,7 +1,6 @@
 package com.example.opencvforjava.ImageComputingCenter;
 
 import com.alibaba.fastjson.JSON;
-import com.example.opencvforjava.domain.ComputePointArrDto;
 import org.opencv.core.*;
 import org.opencv.features2d.DescriptorMatcher;
 import org.opencv.features2d.Feature2D;

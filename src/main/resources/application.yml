@@ -1,0 +1,7 @@
+thread:
+  pool:
+    executor:
+      threadNamePrefix: threadPoolTaskExecutor-
+      queueCapacity: 100
+      rejectedExecutionHandler: java.util.concurrent.ThreadPoolExecutor$AbortPolicy
+      keepAliveSeconds: 60
