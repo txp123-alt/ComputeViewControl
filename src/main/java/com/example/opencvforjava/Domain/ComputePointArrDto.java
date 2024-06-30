@@ -1,6 +1,7 @@
 package com.example.opencvforjava.Domain;
 
 import lombok.Data;
+import org.opencv.core.Mat;
 
 import java.util.List;
 import java.util.Map;
@@ -27,6 +28,12 @@ public class ComputePointArrDto {
     //计算耗时
     long computeDuration;
 
+    //请求的图像
+    Mat TemplateImage;
+
+    //目标图像
+    Mat targetImage;
+
     //计算结果(坐标点)
-    List<Map<String,Integer>> resultPointArr;
+    List<Map<String,Double>> resultPointArr;
 }
